@@ -1,0 +1,107 @@
+aid: visage-imaging
+name: Visage Imaging
+review:
+  question: Does Visage Imaging expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Visage Imaging does not publish any
+    public API - there is no self-service developer portal, no published API
+    reference, and no documented streaming transport (WebSocket or SSE) on any
+    Visage 7 surface. The Visage 7 thin-client streams server-side rendered
+    imagery to its own proprietary viewer client, but that internal streaming
+    channel is not a documented, publicly consumable API and its wire protocol
+    is not published. There is therefore no documented server-push API surface
+    to model in AsyncAPI.
+findings:
+  summary: |
+    Visage Imaging does not publish a documented public WebSocket API. Visage
+    Imaging is a wholly-owned subsidiary of Pro Medicus Limited (ASX PME) and
+    the maker of the Visage 7 Enterprise Imaging Platform - a server-side
+    rendered, zero-footprint thin-client enterprise imaging / PACS-replacement
+    product. Visage does not operate a public developer portal: its Product
+    Documentation and Client Portal require a customer login, and the Visage AI
+    Accelerator Program (the open-API / AI research server surface) is
+    invitation-only. Public product and release-note material references (a) an
+    Open AI API for AI algorithm integration on the AI Accelerator research
+    server, (b) a REST API for a QA delete-and-resend workflow introduced in a
+    Visage 7 release, and (c) standards-based interoperability via DICOM /
+    DICOMweb, HL7, FHIR, and IHE. None of these are described as WebSocket, and
+    none are published as an open, self-service API. The Visage 7 thin-client
+    does adaptively stream rendered images from the server to the viewer, but
+    that is a proprietary client-server rendering channel, not a documented
+    public WebSocket API, and Visage does not publish its transport details.
+  accessModel: |
+    Partner- and customer-gated. No public developer portal, no open API-key
+    signup, no published API reference or OpenAPI description. API and
+    integration details live behind the Client Portal login, the (login-gated)
+    Product Documentation, and the invitation-only AI Accelerator Program. The
+    API entries in apis.yml are logically modeled from public material and are
+    marked endpointsModeled; they are not transcribed from an official reference.
+  ownership: |
+    Visage 7 was "developed exclusively by Pro Medicus' wholly-owned subsidiary,
+    Visage Imaging," on a single code base. Visage Imaging is the enterprise
+    imaging arm of Pro Medicus (promedicus.com).
+  standards:
+    - DICOM
+    - DICOMweb (QIDO-RS / WADO-RS / WADO-URI / STOW-RS)
+    - HL7 v2
+    - FHIR (ImagingStudy, DiagnosticReport)
+    - IHE enterprise-imaging profiles
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: partial
+      note: A REST API for a QA delete-and-resend workflow is referenced in Visage 7 release notes; not published in a public reference. Base URL is per-deployment.
+    - protocol: Open AI API
+      scheme: https
+      documented: partial
+      note: Open API for AI algorithm integration on the Visage AI Accelerator research server (FHIR, Python, NIfTI, segmentations). Access is invitation-only; no public reference.
+    - protocol: DICOMweb
+      scheme: https
+      documented: partial
+      note: Standards-based QIDO-RS / WADO-RS / STOW-RS against the archive-neutral Visage 7 platform. Deployment-specific; not exposed via a public portal.
+    - protocol: HL7/FHIR
+      scheme: https
+      documented: partial
+      note: HL7 v2 messaging and FHIR resources for EHR/RIS interoperability. Integration-specific; no public FHIR capability statement.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on any public Visage Imaging or Visage 7 page. The thin-client image-streaming channel is proprietary and its protocol is not published.
+  endpointsModeled: true
+sources:
+  - url: https://visageimaging.com/
+    type: Website
+    note: Visage 7 Enterprise Imaging Platform overview; no developer portal or public API reference.
+  - url: https://visageimaging.com/visage-7/
+    type: Documentation
+    note: Server-side rendered thin-client architecture; diagnostic/clinical/EHR/portal/mobile use. No WebSocket or public API reference.
+  - url: https://visageimaging.com/platform/acceleratedai/
+    type: Documentation
+    note: Visage AI Accelerator - Open AI API with FHIR, Python, NIfTI, webforms, segmentations, semantic annotations, radiomics, de-identification. Program is by invitation only.
+  - url: https://visageimaging.com/support/product-documentation/
+    type: Documentation
+    note: Product documentation requires a customer login (gated).
+  - url: http://www2013.visageimaging.com/support/client-portal/
+    type: ClientPortal
+    note: Client Portal login for customers; not a public developer portal.
+  - url: https://www.promed.com.au/visage-7/
+    type: Website
+    note: Pro Medicus confirms Visage 7 was developed exclusively by its wholly-owned subsidiary Visage Imaging.
+  - url: https://www.promedicus.com/
+    type: ParentCompany
+    note: Pro Medicus Limited (ASX PME), parent company of Visage Imaging.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface is documented, and Visage Imaging publishes no
+    public API reference at all. The catalog entry was authored as an honest
+    gated stub: five logically-modeled APIs (AI Open API, QA REST API, DICOMweb,
+    HL7/FHIR, Viewer Launch) each marked endpointsModeled, with no fabricated
+    OpenAPI, plans, rate-limits, or finops artifacts. No AsyncAPI document was
+    created because there is no documented server-push transport on any public
+    Visage surface to model.
