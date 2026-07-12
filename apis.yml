@@ -124,6 +124,8 @@ apis:
     referenced by Visage's EHR-integration and portal use cases; parameters are
     deployment-specific and not publicly documented (endpointsModeled).
 common:
+- type: DomainSecurity
+  url: security/visage-imaging-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/visage-imaging
 - type: Website
