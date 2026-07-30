@@ -14,7 +14,18 @@ description: Visage Imaging is a global enterprise imaging vendor and a wholly-o
   product documentation login, and an invitation-only AI Accelerator Program), so the
   API entries below are logically modeled from public product and release-note
   material rather than a published API reference.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/visage-imaging.png
 tags:
 - Enterprise Imaging
 - Medical Imaging
