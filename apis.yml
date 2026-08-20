@@ -36,6 +36,18 @@ tags:
 - HL7
 - FHIR
 - Healthcare
+- Artificial Intelligence
+- Pro Medicus
+tags_raw:
+- Enterprise Imaging
+- Medical Imaging
+- Radiology
+- PACS
+- DICOM
+- DICOMweb
+- HL7
+- FHIR
+- Healthcare
 - AI
 - Pro Medicus
 created: '2026-07-05'
@@ -45,6 +57,12 @@ apis:
 - aid: visage-imaging:visage-imaging-ai-open-api
   name: Visage 7 AI Open API
   tags:
+  - Artificial Intelligence
+  - Machine-Learning
+  - Algorithm Integration
+  - FHIR
+  - Research
+  tags_raw:
   - AI
   - Machine Learning
   - Algorithm Integration
@@ -65,6 +83,11 @@ apis:
 - aid: visage-imaging:visage-imaging-qa-rest-api
   name: Visage 7 QA REST API
   tags:
+  - QA
+  - Workflows
+  - REST
+  - Data Management
+  tags_raw:
   - QA
   - Workflow
   - REST
