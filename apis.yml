@@ -14,6 +14,17 @@ description: Visage Imaging is a global enterprise imaging vendor and a wholly-o
   product documentation login, and an invitation-only AI Accelerator Program), so the
   API entries below are logically modeled from public product and release-note
   material rather than a published API reference.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
