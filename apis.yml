@@ -1,5 +1,7 @@
 aid: visage-imaging
 url: https://raw.githubusercontent.com/api-evangelist/visage-imaging/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 name: Visage Imaging
 kind: company
 description: Visage Imaging is a global enterprise imaging vendor and a wholly-owned
