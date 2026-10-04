@@ -68,10 +68,11 @@ modified: '2026-07-05'
 specificationVersion: '0.23'
 apis:
 - aid: visage-imaging:visage-imaging-ai-open-api
+  endpointsModeled: true
   name: Visage 7 AI Open API
   tags:
   - Artificial Intelligence
-  - Machine-Learning
+  - Machine Learning
   - Algorithm Integration
   - FHIR
   - Research
@@ -81,6 +82,7 @@ apis:
   - Algorithm Integration
   - FHIR
   - Research
+  - Machine-Learning
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://visageimaging.com/platform/acceleratedai/
   properties:
@@ -94,6 +96,7 @@ apis:
     Program; no public API reference is published, so endpoints are modeled from
     product material (endpointsModeled).
 - aid: visage-imaging:visage-imaging-qa-rest-api
+  endpointsModeled: true
   name: Visage 7 QA REST API
   tags:
   - QA
@@ -116,6 +119,7 @@ apis:
     Client Portal; endpoints and deployment-specific base URL are modeled, not published
     (endpointsModeled).
 - aid: visage-imaging:visage-imaging-dicomweb-api
+  endpointsModeled: true
   name: Visage 7 DICOMweb API
   tags:
   - DICOMweb
@@ -135,6 +139,7 @@ apis:
     the interface is not exposed through a public developer portal; surface is modeled
     from the DICOMweb standard and Visage's stated interoperability (endpointsModeled).
 - aid: visage-imaging:visage-imaging-hl7-fhir-api
+  endpointsModeled: true
   name: Visage 7 HL7 / FHIR Interoperability API
   tags:
   - HL7
@@ -153,6 +158,7 @@ apis:
     toolset). Deployment- and integration-specific; no public FHIR capability statement
     is published, so the surface is modeled (endpointsModeled).
 - aid: visage-imaging:visage-imaging-viewer-launch-api
+  endpointsModeled: true
   name: Visage 7 Viewer Launch API
   tags:
   - Viewer
