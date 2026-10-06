@@ -64,7 +64,7 @@ tags_raw:
 - AI
 - Pro Medicus
 created: '2026-07-05'
-modified: '2026-07-05'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: visage-imaging:visage-imaging-ai-open-api
@@ -177,6 +177,10 @@ apis:
     referenced by Visage's EHR-integration and portal use cases; parameters are
     deployment-specific and not publicly documented (endpointsModeled).
 common:
+- url: https://blog.visageimaging.com/blog
+  type: Blog
+- url: https://blog.visageimaging.com/blog/rss.xml
+  type: BlogRSS
 - type: DomainSecurity
   url: security/visage-imaging-domain-security.yml
 - type: LinkedIn
