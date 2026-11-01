@@ -1,4 +1,4 @@
-# Visage Imaging (visage-imaging)
+# Visage Imaging
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,97 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Visage Imaging is a global enterprise imaging vendor and a wholly-owned subsidiary of Pro Medicus Limited (ASX: PME). Its flagship Visage 7 Enterprise Imaging Platform delivers server-side rendered images adaptively streamed to an intelligent zero-footprint thin-client viewer for diagnostic radiology, cardiology, and mobile reading, alongside Visage 7 Open Archive and the Visage AI Accelerator research platform. Interoperability is built on healthcare imaging standards (DICOM / DICOMweb, HL7, FHIR, and IHE profiles), and Visage exposes REST and open-API surfaces for AI algorithm integration and QA workflows.
+Visage Imaging is a global enterprise imaging vendor and a wholly-owned subsidiary of Pro Medicus Limited (ASX PME). Its flagship Visage 7 Enterprise Imaging Platform delivers server-side rendered images adaptively streamed to an intelligent zero-footprint thin-client viewer for diagnostic radiology, cardiology, and mobile reading, alongside Visage 7 Open Archive and the Visage AI Accelerator research platform. Interoperability is built on healthcare imaging standards - DICOM / DICOMweb, HL7, FHIR, and IHE profiles - and Visage exposes REST and open-API surfaces for AI algorithm integration and QA workflows. There is no public self-service developer portal; API access is partner- and customer-gated (Client Portal login, product documentation login, and an invitation-only AI Accelerator Program), so the API entries below are logically modeled from public product and release-note material rather than a published API reference.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/visage-imaging/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/visage-imaging/refs/heads/main/apis.yml)
+**Areas:** Enterprise Imaging · Medical Imaging · Radiology · PACS · DICOM · DICOMweb · HL7 · FHIR · Healthcare · Artificial Intelligence · Pro Medicus
 
-## Access Model (important)
+## Visage Imaging on APIs.io
 
-Visage Imaging does **not** operate a public, self-service developer portal. There is no openly published API reference, OpenAPI description, or free API key signup. API and integration material lives behind gated channels:
+Everything profiled for Visage Imaging is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/visage-imaging/](https://apis.io/providers/visage-imaging/)** — or go straight to one of the APIs or properties below.
 
-- **Client Portal** and **Product Documentation** require a customer login.
-- The **Visage AI Accelerator Program** (the open-API / AI research server surface) is described as **by invitation only**.
-- Release notes that mention the newer REST API (a QA "delete and resend" workflow) are distributed to customers, not published as a public reference.
+### APIs (5)
 
-Because of this, the API entries in `apis.yml` are **logically modeled** from public product pages, press releases, and release-note summaries rather than transcribed from an official API reference. Individual endpoints, authentication, and base URLs are deployment-specific and are marked `endpointsModeled` in each API's description. This entry is an honest, gated stub - not a claim that these are open, self-serve APIs.
+- [Visage 7 AI Open API](https://apis.io/apis/visage-imaging/visage-imaging-ai-open-api/) — Open API for integrating third-party and customer AI algorithms into the Visage 7 platform and Visage AI Accelerator research server, unifying research and…
+- [Visage 7 QA REST API](https://apis.io/apis/visage-imaging/visage-imaging-qa-rest-api/) — REST API introduced in Visage 7 release notes supporting a data-quality (QA) workflow based on delete-and-resend of studies/objects between Visage 7 and…
+- [Visage 7 DICOMweb API](https://apis.io/apis/visage-imaging/visage-imaging-dicomweb-api/) — Standards-based DICOMweb interface for querying, retrieving, and storing imaging studies against the Visage 7 archive-neutral platform - QIDO-RS (query),…
+- [Visage 7 HL7 / FHIR Interoperability API](https://apis.io/apis/visage-imaging/visage-imaging-hl7-fhir-api/) — HL7 v2 messaging and FHIR-based interoperability for order/result and imaging-context exchange between Visage 7, the EHR, and RIS (including FHIR…
+- [Visage 7 Viewer Launch API](https://apis.io/apis/visage-imaging/visage-imaging-viewer-launch-api/) — Context / URL launch interface used to open the Visage 7 zero-footprint thin-client viewer to a specific patient, study, or accession from an EHR, RIS, or…
 
-## Standards
+### Published properties
 
-Visage 7 is an archive-neutral enterprise imaging platform whose interoperability is grounded in healthcare imaging standards:
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **DICOM / DICOMweb** - QIDO-RS (query), WADO-RS / WADO-URI (retrieve), STOW-RS (store).
-- **HL7 v2** messaging and **FHIR** resources (e.g. ImagingStudy, DiagnosticReport) for order/result and imaging-context exchange with the EHR and RIS.
-- **IHE** enterprise-imaging profiles for cross-system workflow.
-- **Open AI API** with FHIR, Python, NIfTI, webforms, 2D/3D segmentations, semantic annotations, radiomics, bulk de-identification, and ground-truth labeling for the AI Accelerator research server.
+#### Security (1)
 
-## Ownership
+Authentication, trust centre, and vulnerability disclosure.
 
-Visage 7 was "developed exclusively by Pro Medicus' wholly-owned subsidiary, Visage Imaging," on a single code base. Visage Imaging is the enterprise-imaging arm of **Pro Medicus** ([promedicus.com](https://www.promedicus.com/)).
+- [Visage Imaging Domain Security](https://apis.io/security/visage-imaging/visage-imaging-domain-security/)
 
-## Tags
+## Where to find this API
 
-- Enterprise Imaging
-- Medical Imaging
-- Radiology
-- PACS
-- DICOM
-- DICOMweb
-- HL7
-- FHIR
-- Healthcare
-- AI
-- Pro Medicus
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Timestamps
-
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
-
-## APIs (modeled)
-
-### Visage 7 AI Open API
-
-Open API for integrating third-party and customer AI algorithms into Visage 7 and the Visage AI Accelerator research server (FHIR, Python, NIfTI, segmentations, semantic annotations, radiomics, de-identification). Invitation-only; endpoints modeled.
-
-- **Human URL:** [https://visageimaging.com/platform/acceleratedai/](https://visageimaging.com/platform/acceleratedai/)
-
-### Visage 7 QA REST API
-
-REST API (from Visage 7 release notes) for a QA workflow based on delete-and-resend of studies between Visage 7 and connected archives/modalities. Gated; endpoints modeled.
-
-- **Human URL:** [https://visageimaging.com/visage-7/](https://visageimaging.com/visage-7/)
-
-### Visage 7 DICOMweb API
-
-Standards-based DICOMweb interface - QIDO-RS, WADO-RS / WADO-URI, STOW-RS - against the archive-neutral Visage 7 platform. Per-deployment base URL; endpoints modeled.
-
-- **Human URL:** [https://visageimaging.com/visage-7/](https://visageimaging.com/visage-7/)
-
-### Visage 7 HL7 / FHIR Interoperability API
-
-HL7 v2 messaging and FHIR resources for order/result and imaging-context exchange with the EHR and RIS. Deployment-specific; endpoints modeled.
-
-- **Human URL:** [https://visageimaging.com/platform/acceleratedai/](https://visageimaging.com/platform/acceleratedai/)
-
-### Visage 7 Viewer Launch API
-
-Context / URL launch interface to open the Visage 7 thin-client viewer to a specific patient, study, or accession from an EHR, RIS, or portal (SSO + deep-link parameters). Deployment-specific; endpoints modeled.
-
-- **Human URL:** [https://visageimaging.com/visage-7/](https://visageimaging.com/visage-7/)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/visage-imaging)
 - [Website](https://visageimaging.com/)
-- [Documentation](https://visageimaging.com/support/product-documentation/) (login required)
-- [Client Portal](http://www2013.visageimaging.com/support/client-portal/) (login required)
-- [Parent Company - Pro Medicus](https://www.promedicus.com/)
+- [Documentation](https://visageimaging.com/support/product-documentation/)
+- [Blog](https://blog.visageimaging.com/blog)
 
-## Pricing
+## API Evangelist rating
 
-No public pricing. Visage 7 is sold as an enterprise contract (PACS-replacement / enterprise imaging) via direct sales; the AI Accelerator Program is invitation-only. Pricing is contact-sales only.
+**Kin Score 7.5** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 0.0 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/visage-imaging/](https://apis.io/providers/visage-imaging/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Visage Imaging: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/visage-imaging/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
